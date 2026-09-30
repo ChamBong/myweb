@@ -1,0 +1,630 @@
+/* 전체 기본 설정 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: black;
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* 버튼 기본 스타일 */
+
+button {
+    cursor: pointer;
+}
+
+
+/* 전체 사이트 */
+
+.site {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 35px 0 50px;
+}
+
+
+/* 상단 Header */
+
+.header {
+    width: 100%;
+    height: 125px;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+/* 사이트 이름 */
+
+.logo {
+    width: 95px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* 검색창 */
+
+.search-box {
+    width: 430px;
+    height: 32px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    margin-left: 140px;
+    margin-top: 5px;
+}
+
+.search-icon {
+    font-size: 32px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.search-box input {
+    width: 100%;
+    height: 28px;
+    border: none;
+    outline: none;
+    font-size: 13px;
+}
+
+/* 오른쪽 Header 메뉴 */
+
+.header-menu {
+    margin-left: auto;
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.header-item {
+    width: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 사람 아이콘 */
+.person-icon img{
+
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 장바구니 */
+
+.cart-icon {
+
+    width: 62px;
+    height: 62px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+}
+
+/* Header 아래 버튼 */
+
+.header-item button {
+    width: 70px;
+    height: 30px;
+    margin-top: 10px;
+    background-color: white;
+    font-size: 12px;
+}
+
+
+/* 카테고리 메뉴 */
+
+.category {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+
+.category a {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.category a:hover {
+    background-color: lightgrey;
+}
+
+
+/* 메인 배너 */
+
+.main-banner {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: lightgrey;
+}
+
+
+.main-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* 베스트 셀러 */
+
+.best-seller {
+    margin-top: 10px;
+}
+
+
+.best-seller h2 {
+
+    width: 160px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+/* 제품 4개 가로 배치 */
+
+.best-product-list {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+}
+
+
+/* 각각의 제품 */
+
+.best-product {
+    width: 100%;
+}
+
+/* 제품 이미지 */
+
+.product-image {
+
+    width: 100%;
+    height: 150px;
+
+    background-color: white;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 제품 이름 */
+
+.product-name {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+/* 가격 */
+
+.product-price {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+
+/* 2번째 페이지 - 이달의 신상품 */
+
+.product-page {
+
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: 80px;
+    min-height: 550px;
+    padding-top: 35px;
+}
+
+
+/* 왼쪽 이미지 영역 */
+
+.product-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.gallery-item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.number {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.gallery-image {
+    width: 160px;
+    height: 120px;
+
+    background-color: white;
+    overflow: hidden;
+}
+
+
+.gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* 오른쪽 제품 정보 */
+
+.product-info-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 22px;
+
+    padding-top: 8px;
+}
+
+
+.product-info {
+
+    display: grid;
+
+    grid-template-columns:
+        100px
+        1fr;
+
+    width: 250px;
+
+    margin-left: auto;
+}
+
+
+/* 제품명 */
+
+.info-name {
+
+    min-height: 96px;
+
+    border: 1px solid black;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    font-size: 12px;
+}
+
+
+/* 가격 / 평점 / 구매 */
+
+.info-detail {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.info-detail > div {
+
+    height: 32px;
+
+    border: 1px solid black;
+
+    border-left: none;
+
+    display: flex;
+
+    align-items: center;
+
+    padding-left: 8px;
+
+    font-size: 12px;
+}
+
+
+/* 구매하기 */
+
+.buy-button {
+
+    height: 32px;
+
+    border: 1px solid black;
+
+    border-left: none;
+
+    display: flex;
+
+    align-items: center;
+
+    padding-left: 8px;
+
+    font-size: 12px;
+
+    background-color: white;
+}
+
+
+.buy-button:hover {
+
+    background-color: lightgray;
+}
+
+
+/* 3번째 페이지 - 제품 상세 정보 */
+
+.detail-page {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    column-gap: 100px;
+
+    padding-top: 25px;
+}
+
+
+/* ----------------------------------------
+   상품 이미지
+---------------------------------------- */
+
+.detail-image {
+
+    width: 100%;
+
+    height: 300px;
+
+    background-color: #ddd;
+
+    overflow: hidden;
+}
+
+
+.detail-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* 제품 상세 정보 */
+
+.detail-info {
+
+    width: 250px;
+
+    margin-left: auto;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+/* 평점 */
+
+.detail-rating {
+
+    height: 35px;
+
+    border: 1px solid black;
+
+    display: flex;
+
+    align-items: center;
+
+    padding-left: 10px;
+
+    font-size: 12px;
+}
+
+
+/* 제품명 */
+
+.detail-name {
+
+    min-height: 50px;
+
+    border: 1px solid black;
+
+    border-top: none;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+
+/* 가격 */
+
+.detail-price {
+
+    height: 35px;
+
+    border: 1px solid black;
+
+    border-top: none;
+
+    display: flex;
+
+    align-items: center;
+
+    padding-left: 10px;
+
+    font-size: 12px;
+}
+
+
+/* 구매하기 */
+
+.detail-buy {
+
+    height: 35px;
+
+    border: 1px solid black;
+
+    border-top: none;
+
+    background-color: white;
+
+    text-align: left;
+
+    padding-left: 10px;
+
+    font-size: 12px;
+}
+
+
+.detail-buy:hover {
+
+    background-color: lightgray;
+}
+
+
+/* 제품 설명 */
+
+.description {
+
+    grid-column: 1 / 3;
+
+    margin-top: 25px;
+
+    font-size: 12px;
+}
+
+
+.description h3 {
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+}
+
+
+.description p {
+
+    margin: 0;
+
+    color: black;
+}
+
+
+/* 상세 정보 */
+
+.detail-information {
+
+    grid-column: 1 / 3;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr
+        1fr;
+
+    gap: 80px;
+
+    margin-top: 30px;
+}
+
+
+.information-box h3 {
+
+    font-size: 13px;
+
+    margin-bottom: 10px;
+}
+
+
+.information-box {
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+.information-box ul {
+
+    padding-left: 20px;
+}
+
+
+.information-box p {
+
+    margin: 3px 0;
+}
+
+
+
