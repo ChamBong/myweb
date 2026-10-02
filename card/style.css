@@ -1,0 +1,577 @@
+/* =========================================
+   기본 설정
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: "Philosopher", sans-serif;
+
+    color: #333;
+
+    /*
+        배경 이미지
+    */
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.78),
+            rgba(255, 255, 255, 0.78)
+        ),
+        url("images/background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    background-repeat: no-repeat;
+}
+
+
+/* 링크 */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* 리스트 */
+
+ul {
+    list-style: none;
+}
+
+
+/* =========================================
+   전체 페이지
+========================================= */
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+    width: 100%;
+    height: 95px;
+
+    background-color: rgba(255, 255, 255, 0.92);
+
+    border-bottom: 1px solid #999;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 30px;
+
+    position: relative;
+    z-index: 100;
+}
+
+
+/* Letter to- */
+
+.logo {
+    font-family: "Philosopher", sans-serif;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.logo:hover {
+    opacity: 0.6;
+}
+
+
+/* =========================================
+   상단 메뉴
+========================================= */
+
+nav ul {
+    display: flex;
+
+    gap: 14px;
+}
+
+nav li {
+    width: 60px;
+    height: 40px;
+
+    border: 1px solid #999;
+
+    background-color: rgba(255, 255, 255, 0.8);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.25s ease;
+}
+
+nav li:hover {
+    background-color: #333;
+
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+nav a {
+    font-family: "Nanum Pen Script", cursive;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+    width: 100%;
+
+    min-height: calc(100vh - 95px);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* 중앙 문구 */
+
+.intro-text {
+    font-family: "Philosopher", sans-serif;
+
+    font-size: 27px;
+
+    font-weight: 400;
+
+    line-height: 1.4;
+
+    letter-spacing: 0.5px;
+
+    animation: introFade 1.5s ease forwards;
+}
+
+.intro-text span {
+    display: block;
+}
+
+
+/* 인트로 등장 */
+
+@keyframes introFade {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   편지 페이지
+========================================= */
+
+.letter-page {
+    width: 100%;
+
+    min-height: calc(100vh - 95px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    position: relative;
+
+    padding-top: 32px;
+}
+
+
+/* =========================================
+   "여기야!!"
+========================================= */
+
+.reveal-area {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 400px;
+}
+
+
+/* 여기야 */
+
+.reveal-btn {
+    font-family: "Nanum Pen Script", cursive;
+
+    font-size: 29px;
+
+    cursor: pointer;
+
+    padding: 10px 20px;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.reveal-btn:hover {
+    transform: scale(1.08);
+
+    opacity: 0.65;
+}
+
+
+/* =========================================
+   편지 카드
+========================================= */
+
+.letter-card {
+    width: 340px;
+
+    min-height: 420px;
+
+    margin-top: 25px;
+
+    padding: 14px;
+
+    background-color: rgba(255, 255, 255, 0.97);
+
+    border: 1px solid #d0d0d0;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.12);
+
+    /*
+        처음 상태
+    */
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(35px)
+        scale(0.94);
+
+    filter: blur(3px);
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease,
+        filter 0.5s ease,
+        visibility 0.5s ease;
+}
+
+
+/*
+    여기야!! 또는 카드 위에
+    마우스를 올리고 있으면 등장
+*/
+
+.reveal-area:hover .letter-card {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+    filter: blur(0);
+}
+
+
+/* =========================================
+   카드 이미지
+========================================= */
+
+.letter-image {
+    width: 100%;
+
+    height: 210px;
+
+    background-color: #ddd;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.letter-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.6s ease;
+}
+
+
+/*
+    카드가 나타날 때
+    이미지도 살짝 확대
+*/
+
+.reveal-area:hover .letter-image img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   카드 제목
+========================================= */
+
+.letter-title {
+    margin-top: 18px;
+
+    padding-bottom: 10px;
+
+    font-size: 25px;
+
+    font-weight: 400;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* =========================================
+   카드 내용
+========================================= */
+
+.letter-content {
+    margin-top: 15px;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   폰트 선택 영역
+========================================= */
+
+.font-select {
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 20px;
+
+    z-index: 10;
+}
+
+
+/*
+    실제 radio 버튼은 숨김
+*/
+
+.font-select input {
+    display: none;
+}
+
+
+/*
+    버튼처럼 보이는 label
+*/
+
+.font-select label {
+    padding: 6px 12px;
+
+    border: 1px solid #aaa;
+
+    background-color: rgba(255, 255, 255, 0.8);
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    transition: all 0.2s ease;
+}
+
+
+.font-select label:hover {
+    background-color: #eee;
+}
+
+
+/* =========================================
+   Philosopher 선택
+========================================= */
+
+#philosopher:checked + label {
+    background-color: #333;
+
+    color: white;
+
+    font-family: "Philosopher", sans-serif;
+}
+
+
+/* =========================================
+   Nanum Pen Script 선택
+========================================= */
+
+#nanum-pen-script:checked + label {
+    background-color: #333;
+
+    color: white;
+
+    font-family: "Nanum Pen Script", cursive;
+}
+
+
+/* =========================================
+   선택된 폰트를 카드에 적용
+========================================= */
+
+.font-select:has(#philosopher:checked)
+~ .reveal-area
+.letter-card
+.letter-title,
+
+.font-select:has(#philosopher:checked)
+~ .reveal-area
+.letter-card
+.letter-content {
+
+    font-family: "Philosopher", sans-serif;
+}
+
+
+/* Nanum Pen Script */
+
+.font-select:has(#nanum-pen-script:checked)
+~ .reveal-area
+.letter-card
+.letter-title,
+
+.font-select:has(#nanum-pen-script:checked)
+~ .reveal-area
+.letter-card
+.letter-content {
+
+    font-family: "Nanum Pen Script", cursive;
+}
+
+
+/* =========================================
+   카드 등장 애니메이션
+========================================= */
+
+@keyframes cardAppear {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(40px)
+            scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =========================================
+   모바일
+========================================= */
+
+@media screen and (max-width: 600px) {
+
+    header {
+        height: 80px;
+
+        padding: 0 15px;
+    }
+
+
+    .logo {
+        font-size: 20px;
+    }
+
+
+    nav ul {
+        gap: 5px;
+    }
+
+
+    nav li {
+        width: 55px;
+
+        height: 35px;
+    }
+
+
+    nav a {
+        font-size: 16px;
+    }
+
+
+    .intro-text {
+        font-size: 22px;
+    }
+
+
+    .reveal-area {
+        width: 90%;
+    }
+
+
+    .letter-card {
+        width: 90%;
+    }
+
+
+    .font-select {
+        margin-top: 15px;
+    }
+}
