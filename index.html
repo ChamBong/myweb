@@ -1,32 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>작업물 링크</title>
+    <title>Green Cafe</title>
 
     <style>
-        .container a{
-            display: flex;
+        header {
+            font-size: 36px;
             font-weight: bold;
-            font-size: 24px;
-            justify-content: center;
+            text-align: center;
+            background-color: lightblue;
+            padding: 20px;
         }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .grid-item {
+            background-color: lightpink;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .grid-item:hover {
+            background-color: hotpink;
+        }
+
+        .content-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .menu-card {
+            border: 1px solid lightgray;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            background-color: seashell;
+        }
+
+        .menu-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .menu-card h3 {
+            color: black;
+        }
+
+        .menu-card p {
+            color: orange;
+            font-weight: bold;
+        }
+
+        
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <a href="card/index.html">
-            카드
-        </a><br>
-        <hr>
-        <a href="fairytale/index.html">
-            동화책
-        </a><br>
-        <hr>
-        <a href="#">
-            작업물 3
-        </a>
+
+    <header>Green Cafe</header>
+
+    <hr>
+
+    <div class="grid-container">
+        <button class="grid-item" data-file="coffee_menu.txt">
+            Coffee
+        </button>
+
+        <button class="grid-item" data-file="non_coffee_menu.txt">
+            Non-Coffee
+        </button>
+
+        <button class="grid-item" data-file="dessert_menu.txt">
+            Dessert
+        </button>
     </div>
+
+    <hr>
+
+    <div class="content-container">
+        그린 커피에 어서오세요!
+    </div>
+
+    <script>
+
+        const buttons = document.querySelectorAll(".grid-item");
+        const content = document.querySelector(".content-container");
+
+        buttons.forEach(function (button) {
+
+            button.addEventListener("click", function () {
+
+                const fileName = button.dataset.file;
+
+                const xhttp = new XMLHttpRequest();
+
+                xhttp.open("GET", fileName);
+
+                xhttp.onload = function () {
+                    
+                    const menus = JSON.parse(xhttp.responseText);
+
+                    //메뉴 비우기
+                    content.innerHTML = "";
+
+                    //메뉴 하나씩 화면에 출력
+                    menus.forEach(function (menu) {
+
+                        const card = document.createElement("div");
+                        card.className = "menu-card";
+
+                        card.innerHTML = `
+                                    <img src="${menu.사진}" alt="${menu.이름}">
+                                    <h3>${menu.이름}</h3>
+                                    <p>${menu.가격.toLocaleString()}원</p>`;
+
+                        content.appendChild(card);
+                    });
+
+                };
+
+                xhttp.send();
+            });
+        });
+    </script>
+
 </body>
+
 </html>

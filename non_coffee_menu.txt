@@ -1,0 +1,52 @@
+[
+  {
+    "사진": "images/chocolate_latte.jpg",
+    "이름": "초코라떼",
+    "가격": 4200
+  },
+  {
+    "사진": "images/green_tea_latte.jpg",
+    "이름": "녹차라떼",
+    "가격": 4200
+  },
+  {
+    "사진": "images/strawberry_latte.jpg",
+    "이름": "딸기라떼",
+    "가격": 4800
+  },
+  {
+    "사진": "images/sweet_potato_latte.jpg",
+    "이름": "고구마라떼",
+    "가격": 4300
+  },
+  {
+    "사진": "images/milk_tea.jpg",
+    "이름": "밀크티",
+    "가격": 4500
+  },
+  {
+    "사진": "images/lemon_ade.jpg",
+    "이름": "레몬에이드",
+    "가격": 4300
+  },
+  {
+    "사진": "images/grapefruit_ade.jpg",
+    "이름": "자몽에이드",
+    "가격": 4500
+  },
+  {
+    "사진": "images/green_grape_ade.jpg",
+    "이름": "청포도에이드",
+    "가격": 4500
+  },
+  {
+    "사진": "images/peach_iced_tea.jpg",
+    "이름": "복숭아아이스티",
+    "가격": 3500
+  },
+  {
+    "사진": "images/chamomile_tea.jpg",
+    "이름": "캐모마일티",
+    "가격": 3800
+  }
+]

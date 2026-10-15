@@ -1,0 +1,52 @@
+[
+  {
+    "사진": "images/plain_cheesecake.jpg",
+    "이름": "플레인 치즈케이크",
+    "가격": 5500
+  },
+  {
+    "사진": "images/chocolate_brownie.jpg",
+    "이름": "초코 브라우니",
+    "가격": 4200
+  },
+  {
+    "사진": "images/croissant.jpg",
+    "이름": "크루아상",
+    "가격": 3500
+  },
+  {
+    "사진": "images/basque_cheesecake.jpg",
+    "이름": "바스크 치즈케이크",
+    "가격": 5800
+  },
+  {
+    "사진": "images/tiramisu.jpg",
+    "이름": "티라미수",
+    "가격": 5500
+  },
+  {
+    "사진": "images/macaron.jpg",
+    "이름": "마카롱",
+    "가격": 2500
+  },
+  {
+    "사진": "images/honey_bread.jpg",
+    "이름": "허니브레드",
+    "가격": 6000
+  },
+  {
+    "사진": "images/waffle.jpg",
+    "이름": "와플",
+    "가격": 5000
+  },
+  {
+    "사진": "images/chocolate_chip_cookie.jpg",
+    "이름": "초코칩 쿠키",
+    "가격": 2200
+  },
+  {
+    "사진": "images/strawberry_cake.jpg",
+    "이름": "딸기 생크림 케이크",
+    "가격": 6000
+  }
+]

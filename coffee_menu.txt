@@ -1,0 +1,52 @@
+[
+  {
+    "사진": "images/americano.jpg",
+    "이름": "아메리카노",
+    "가격": 3000
+  },
+  {
+    "사진": "images/cafe_latte.jpg",
+    "이름": "카페라떼",
+    "가격": 3800
+  },
+  {
+    "사진": "images/cappuccino.jpg",
+    "이름": "카푸치노",
+    "가격": 3800
+  },
+  {
+    "사진": "images/vanilla_latte.jpg",
+    "이름": "바닐라라떼",
+    "가격": 4300
+  },
+  {
+    "사진": "images/caramel_macchiato.jpg",
+    "이름": "카라멜마키아토",
+    "가격": 4500
+  },
+  {
+    "사진": "images/cafe_mocha.jpg",
+    "이름": "카페모카",
+    "가격": 4500
+  },
+  {
+    "사진": "images/hazelnut_latte.jpg",
+    "이름": "헤이즐넛라떼",
+    "가격": 4300
+  },
+  {
+    "사진": "images/cold_brew.jpg",
+    "이름": "콜드브루",
+    "가격": 4000
+  },
+  {
+    "사진": "images/cold_brew_latte.jpg",
+    "이름": "콜드브루라떼",
+    "가격": 4500
+  },
+  {
+    "사진": "images/espresso.jpg",
+    "이름": "에스프레소",
+    "가격": 2500
+  }
+]
